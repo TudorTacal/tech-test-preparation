@@ -12,13 +12,18 @@ describe("FizzBuzz", function(){
 
   describe("#isDivisibleBy", function (){
     it("returns true if is divisible by three", function (){
-      expect(fizzBuzz.isDivisibleBy(3)).toBe(true)
+      expect(fizzBuzz.isDivisibleByThree(3)).toBe(true)
     });
     it("return false if it is not divisible by three", function(){
-      expect(fizzBuzz.isDivisibleBy(4)).toBe(false)
+      expect(fizzBuzz.isDivisibleByThree(4)).toBe(false)
     });
+
     it("return true if it's divisible by 5", function () {
-      expect(fizzBuzz.isDivisibleBy(5)).toBe(true)
+      expect(fizzBuzz.isDivisibleByFive(5)).toBe(true)
+    })
+
+    it("returns false if it's not divisible by 5", function(){
+      expect(fizzBuzz.isDivisibleByFive(6)).toBe(false)
     })
 
 
