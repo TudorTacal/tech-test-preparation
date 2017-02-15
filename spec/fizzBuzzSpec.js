@@ -5,28 +5,33 @@ describe("FizzBuzz", function(){
   beforeEach( function(){
     fizzBuzz = new FizzBuzz;
   });
-
   it("FizzBuzz should be a constructor", function(){
     expect(fizzBuzz).toEqual(jasmine.any(FizzBuzz));
   });
-
-  describe("#isDivisibleBy", function (){
+  describe("#isDivisibleByThree", function (){
     it("returns true if is divisible by three", function (){
       expect(fizzBuzz.isDivisibleByThree(3)).toBe(true)
     });
     it("return false if it is not divisible by three", function(){
       expect(fizzBuzz.isDivisibleByThree(4)).toBe(false)
     });
-
+  })
+  describe("#isDivisibleByFive", function () {
     it("return true if it's divisible by 5", function () {
       expect(fizzBuzz.isDivisibleByFive(5)).toBe(true)
-    })
+    });
 
     it("returns false if it's not divisible by 5", function(){
       expect(fizzBuzz.isDivisibleByFive(6)).toBe(false)
+    });
+  });
+  describe("isDivisibleByThreeAndFive", function () {
+    it("returns true if it's divisible by 3 and 5", function(){
+      expect(fizzBuzz.isDivisibleByThreeAndFive(15)).toBe(true)
     })
-
-
+    it("return false if it's not divisible by 3 and 5", function () {
+      expect(fizzBuzz.isDivisibleByThreeAndFive(16)).toBe(false)
+    });
   });
 
 });
