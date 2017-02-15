@@ -42,6 +42,14 @@ describe("FizzBuzz", function(){
     it("should return 'buzz' when passed the number 5", function(){
       expect(fizzBuzz.play(5)).toEqual("buzz");
     });
+
+    it("should return 'fizzbuzz' when passed the number 15", function () {
+      expect(fizzBuzz.play(15)).toEqual('fizzbuzz')
+    })
+
+    it("should return the number if it's not divisible by 3 or 5", function () {
+      expect(fizzBuzz.play(16)).toEqual(16)
+    })
   });
 
 });
