@@ -10,4 +10,10 @@ describe("FizzBuzz", function(){
     expect(fizzBuzz).toEqual(jasmine.any(FizzBuzz));
   });
 
+  describe("#isDivisibleBy", function (){
+    it("returns true if is divisible by three", function (){
+      expect(fizzBuzz.isDivisibleBy(3)).toBe(true)
+    });
+  });
+
 });
