@@ -34,4 +34,14 @@ describe("FizzBuzz", function(){
     });
   });
 
+  describe("play", function(){
+    it("should return 'fizz' when passed the number 3", function(){
+      expect(fizzBuzz.play(3)).toEqual("fizz");
+    });
+
+    it("should return 'buzz' when passed the number 5", function(){
+      expect(fizzBuzz.play(5)).toEqual("buzz");
+    });
+  });
+
 });
